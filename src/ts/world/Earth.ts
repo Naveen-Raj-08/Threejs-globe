@@ -231,7 +231,7 @@ export default class earth {
     });
 
     this.aroundPoints = new Points(this.around, aroundMaterial);
-    this.aroundPoints.name = "星空";
+    this.aroundPoints.name = "Europe";
     this.aroundPoints.scale.set(1, 1, 1);
     this.group.add(this.aroundPoints);
   }
@@ -384,9 +384,9 @@ export default class earth {
       cityArry = cityArry.concat(...item.endArray);
       await Promise.all(cityArry.map(async e => {
         const p = lon2xyz(this.options.earth.radius * 1.001, e.E, e.N);
-        const div = `<div class="fire-div">${e.name}</div>`;
+        // const div = `<div class="fire-div">${e.name}</div>`;
         const shareContent = document.getElementById("html2canvas");
-        shareContent.innerHTML = div;
+        // shareContent.innerHTML = div;
         const opts = {
           backgroundColor: null, // 背景透明
           scale: 6,
@@ -465,7 +465,7 @@ export default class earth {
     );
 
     this.circleLineList.push(line, l2, l3);
-    ball.name = ball2.name = ball3.name = "卫星";
+    ball.name = ball2.name = ball3.name = "US";
 
     for (let i = 0; i < this.options.satellite.number; i++) {
       const ball01 = ball.clone();
